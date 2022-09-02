@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import { makeStyles } from "@material-ui/core";
 
 const pages = ["Tutorials", "Blog", "Dashboard"];
 
@@ -25,7 +26,11 @@ const NavBar = () => {
   return (
     <AppBar
       position="static"
-      style={{ background: "transparent", boxShadow: "none", color: "black" }}
+      style={{
+        background: "transparent",
+        boxShadow: "0 -6px 12px",
+        color: "black",
+      }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -65,6 +70,24 @@ const NavBar = () => {
               ))}
             </Menu>
           </Box>
+
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              display: { xs: "flex", md: "none" },
+              fontFamily: "monospace",
+              fontWeight: 700,
+              color: "inherit",
+              textDecoration: "none",
+              fontSize: 27,
+            }}
+          >
+            codenan
+          </Typography>
+
           <Box
             sx={{ display: { xs: "none", md: "flex" } }}
             style={{
@@ -88,7 +111,6 @@ const NavBar = () => {
                 component="a"
                 href="/"
                 sx={{
-                  mr: 2,
                   display: { xs: "none", md: "flex" },
                   fontFamily: "monospace",
                   fontWeight: 700,
@@ -97,7 +119,7 @@ const NavBar = () => {
                   fontSize: 27,
                 }}
               >
-                Codenan
+                codenan
               </Typography>
             </Box>
             <Box
@@ -114,7 +136,7 @@ const NavBar = () => {
                   sx={{
                     my: 2,
                     color: "black",
-                    display: "block",
+                    display: "inline-block",
                     marginTop: 3,
                   }}
                 >
@@ -130,7 +152,38 @@ const NavBar = () => {
                 flex: "1",
                 justifyContent: "center",
               }}
-            ></Box>
+            >
+              <Button
+                sx={{
+                  my: 2,
+                  color: "white",
+                  fontWeight: "bold",
+                  display: "inline-block",
+                  backgroundColor: "#be3723",
+                  marginTop: 3,
+                  "&:hover": {
+                    backgroundColor: "#d94730",
+                  },
+                }}
+              >
+                Sign Up
+              </Button>
+              <Button
+                sx={{
+                  my: 2,
+                  fontWeight: "bold",
+                  color: "black",
+                  display: "inline-block",
+                  marginLeft: "5px",
+                  marginTop: 3,
+                  "&:hover": {
+                    backgroundColor: "#f6f6f6",
+                  },
+                }}
+              >
+                Sign In
+              </Button>
+            </Box>
           </Box>
         </Toolbar>
       </Container>
