@@ -1,11 +1,5 @@
 .App {
-  width: 100vw;
-  height: 100vh;
   background-color: rgb(221, 229, 216);
-  display: flex;
   justify-content: center;
   align-items: center;
-}
-h1 {
-  font-size: xx-large;
 }

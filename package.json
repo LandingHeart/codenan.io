@@ -16,6 +16,7 @@
     "node": "18.8.0"
   },
   "dependencies": {
+    "@codemirror/lang-javascript": "^6.0.2",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@material-ui/core": "^4.12.4",
@@ -23,9 +24,12 @@
     "@mui/material": "^5.10.3",
     "@mui/styled-engine-sc": "^5.10.3",
     "@mui/styles": "^5.10.3",
+    "@uiw/react-codemirror": "^4.12.0",
     "clean-webpack-plugin": "^4.0.0",
+    "codemirror": "^6.0.1",
     "express": "^4.18.1",
     "react": "^17.0.2",
+    "react-codemirror2": "^7.2.1",
     "react-dom": "^17.0.2",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",

@@ -9,9 +9,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { makeStyles } from "@material-ui/core";
 
-const pages = ["Tutorials", "Blog", "Dashboard"];
+const pages = ["Tutorials", "Blog", "Project Dashboard", "Community"];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -34,7 +33,17 @@ const NavBar = () => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              display: "flex",
+              flex: 1,
+              display: {
+                xs: "flex",
+                md: "none",
+                justifyContent: "space-between",
+              },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
