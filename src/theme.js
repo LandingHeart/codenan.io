@@ -42,26 +42,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "'Roboto', sans-serif",
-    body1: {
-      fontFamily: "Lato, sans-serif",
-      fontWeight: 400,
-      fontSize: 16,
-      lineHeight: "24px",
-      letterSpacing: "0px",
-    },
-    body2: {
-      fontFamily: "Lato, sans-serif",
-      fontWeight: 400,
-      fontSize: 12,
-      lineHeight: "16px",
-      letterSpacing: "0px",
-    },
-  },
-  props: {
-    MuiButtonBase: {
-      disableRipple: true,
-    },
+    fontFamily: "'Charis SIL', serif",
   },
   shadows: Array(25).fill("none"),
   spacing: 8,

@@ -8,11 +8,12 @@ import MergeSort from "./MergeSort";
 const styles = (theme) => ({});
 
 function MainPage() {
+  const executeCode = (codeString) => {};
   return (
     <div className="main-page">
       <div className="main-page-container">
         <div className="main-page-code-editor-col-1">
-          <CodeEditor />
+          <CodeEditor execute={executeCode} />
         </div>
         <div className="main-page-action-content">
           <div className="action-content-col">
@@ -29,15 +30,6 @@ function MainPage() {
             >
               Visualizing Coding Puzzles
             </Typography>
-            <Button
-              style={{
-                color: "white",
-                backgroundColor: "#be3723",
-                marginBottom: "100px",
-              }}
-            >
-              Start Now
-            </Button>
           </div>
           <div className="action-content-col">
             <MergeSort />

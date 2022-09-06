@@ -85,13 +85,13 @@ const NavBar = () => {
             noWrap
             component="a"
             href="/"
+            style={{ fontSize: "30px" }}
             sx={{
               display: { xs: "flex", md: "none" },
-              fontFamily: "monospace",
               fontWeight: 700,
               color: "inherit",
               textDecoration: "none",
-              fontSize: 27,
+              fontSize: "27px",
             }}
           >
             codenan
@@ -119,13 +119,14 @@ const NavBar = () => {
                 noWrap
                 component="a"
                 href="/"
-                sx={{
-                  display: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
-                  fontWeight: 700,
+                style={{
+                  fontWeight: "bold",
                   color: "inherit",
                   textDecoration: "none",
-                  fontSize: 27,
+                  fontSize: "28px",
+                }}
+                sx={{
+                  display: { xs: "none", md: "flex" },
                 }}
               >
                 codenan
@@ -149,7 +150,7 @@ const NavBar = () => {
                     marginTop: 3,
                   }}
                 >
-                  {page}
+                  <Typography> {page}</Typography>
                 </Button>
               ))}
             </Box>
@@ -175,7 +176,7 @@ const NavBar = () => {
                   },
                 }}
               >
-                Sign Up
+                <Typography> Sign Up</Typography>
               </Button>
               <Button
                 sx={{
@@ -190,7 +191,7 @@ const NavBar = () => {
                   },
                 }}
               >
-                Sign In
+                <Typography> Sign In</Typography>
               </Button>
             </Box>
           </Box>
