@@ -31,6 +31,7 @@ function mergeSort(array) {
   const left = array.splice(0, half)
   return merge(mergeSort(left),mergeSort(array))
 }
+console.log('helloasdflkj')
 `;
 
 function CodeEditor(props) {
@@ -41,7 +42,7 @@ function CodeEditor(props) {
   }, []);
 
   const executeCode = () => {
-    let temp = eval(code);
+    let temp = eval(console.log("hello"));
     setOutput(temp);
   };
   return (
