@@ -9,8 +9,21 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-
-const pages = ["Tutorials", "Blog", "Project Dashboard", "Community"];
+import Link from "@mui/material/Link";
+const pages = [
+  {
+    navTitle: "Blog",
+    navLink: "blog",
+  },
+  {
+    navTitle: "Tutorial",
+    navLink: "tutorial",
+  },
+  {
+    navTitle: "Dashboard",
+    navLink: "dashboard",
+  },
+];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -72,9 +85,14 @@ const NavBar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography>{page}</Typography>
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <Link
+                    href={page.navLink}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <Typography>{page.navTitle}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -139,19 +157,15 @@ const NavBar = () => {
                 justifyContent: "center",
               }}
             >
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    my: 2,
-                    color: "black",
-                    display: "inline-block",
-                    marginTop: 3,
-                  }}
-                >
-                  <Typography> {page}</Typography>
-                </Button>
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <Link
+                    href={page.navLink}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <Typography>{page.navTitle}</Typography>
+                  </Link>
+                </MenuItem>
               ))}
             </Box>
 

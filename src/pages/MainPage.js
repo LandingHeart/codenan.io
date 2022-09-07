@@ -1,9 +1,9 @@
 import { Button, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import CodeEditor from "./codeEditor/CodeEditor";
+import CodeEditor from "../components/codeEditor/CodeEditor";
 import { withStyles } from "@mui/styles";
 import "./main-page.css";
-import MergeSort from "./MergeSort";
+import MergeSort from "../components/MergeSort";
 
 const styles = (theme) => ({});
 

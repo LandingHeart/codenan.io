@@ -43,6 +43,9 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: "'Charis SIL', serif",
+    button: {
+      textTransform: "none",
+    },
   },
   shadows: Array(25).fill("none"),
   spacing: 8,

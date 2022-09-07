@@ -7,7 +7,6 @@ import AppRouter from "./AppRouter";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <NavBar />
       <AppRouter />
     </ThemeProvider>
   );

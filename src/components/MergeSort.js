@@ -33,8 +33,9 @@ export default function MergeSort() {
           justifyContent: "space-between",
         }}
       >
-        {list.map((ele) => (
+        {list.map((ele, index) => (
           <div
+            key={index}
             style={{
               backgroundColor: "grey",
               borderRadius: "50px",
