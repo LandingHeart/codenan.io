@@ -13,16 +13,16 @@ import Link from "@mui/material/Link";
 const pages = [
   {
     navTitle: "Blog",
-    navLink: "blog",
+    navLink: "blog"
   },
   {
     navTitle: "Tutorial",
-    navLink: "tutorial",
+    navLink: "tutorial"
   },
   {
     navTitle: "Dashboard",
-    navLink: "dashboard",
-  },
+    navLink: "dashboard"
+  }
 ];
 
 const NavBar = () => {
@@ -41,7 +41,7 @@ const NavBar = () => {
       style={{
         background: "transparent",
         boxShadow: "0 -6px 12px",
-        color: "black",
+        color: "black"
       }}
     >
       <Container maxWidth="xl">
@@ -53,8 +53,8 @@ const NavBar = () => {
               display: {
                 xs: "flex",
                 md: "none",
-                justifyContent: "space-between",
-              },
+                justifyContent: "space-between"
+              }
             }}
           >
             <IconButton
@@ -72,17 +72,17 @@ const NavBar = () => {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "left",
+                horizontal: "left"
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "left",
+                horizontal: "left"
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "block", md: "none" }
               }}
             >
               {pages.map((page, index) => (
@@ -109,7 +109,7 @@ const NavBar = () => {
               fontWeight: 700,
               color: "inherit",
               textDecoration: "none",
-              fontSize: "27px",
+              fontSize: "27px"
             }}
           >
             codenan
@@ -122,14 +122,14 @@ const NavBar = () => {
               display: "flex",
               flexDirection: "row",
               justifyContent: "center",
-              alignItems: "center",
+              alignItems: "center"
             }}
           >
             <Box
               sx={{ display: { xs: "none", md: "flex" } }}
               style={{
                 flex: "1",
-                justifyContent: "center",
+                justifyContent: "center"
               }}
             >
               <Typography
@@ -141,10 +141,10 @@ const NavBar = () => {
                   fontWeight: "bold",
                   color: "inherit",
                   textDecoration: "none",
-                  fontSize: "28px",
+                  fontSize: "28px"
                 }}
                 sx={{
-                  display: { xs: "none", md: "flex" },
+                  display: { xs: "none", md: "flex" }
                 }}
               >
                 codenan
@@ -154,7 +154,7 @@ const NavBar = () => {
               sx={{ display: { xs: "none", md: "flex" } }}
               style={{
                 flex: "3",
-                justifyContent: "center",
+                justifyContent: "center"
               }}
             >
               {pages.map((page, index) => (
@@ -174,7 +174,7 @@ const NavBar = () => {
               style={{
                 display: "1",
                 flex: "1",
-                justifyContent: "center",
+                justifyContent: "center"
               }}
             >
               <Button
@@ -183,11 +183,11 @@ const NavBar = () => {
                   color: "white",
                   fontWeight: "bold",
                   display: "inline-block",
-                  backgroundColor: "#be3723",
+                  backgroundColor: "black",
                   marginTop: 3,
                   "&:hover": {
-                    backgroundColor: "#d94730",
-                  },
+                    backgroundColor: "#d94730"
+                  }
                 }}
               >
                 <Typography> Sign Up</Typography>
@@ -201,8 +201,8 @@ const NavBar = () => {
                   marginLeft: "5px",
                   marginTop: 3,
                   "&:hover": {
-                    backgroundColor: "#f6f6f6",
-                  },
+                    backgroundColor: "#f6f6f6"
+                  }
                 }}
               >
                 <Typography> Sign In</Typography>

@@ -19,36 +19,38 @@ const theme = createTheme({
       xs: 0, // Mobile
       sm: 576, // Mobile Landscape
       md: 768, // Tablet
-      lg: 1200, // Desktop
-    },
+      lg: 1200 // Desktop
+    }
   },
   palette: {
     primary: {
       main: colors.grey700,
-      dark: colors.grey600,
+      dark: colors.grey600
     },
     secondary: {
       main: colors.grey500,
-      contrastText: colors.grey400,
+      contrastText: colors.grey400
     },
     error: {
-      main: colors.grey300,
+      main: colors.grey300
     },
     text: {
       primary: colors.grey600,
       secondary: colors.grey200,
       disabled: colors.grey100,
-      hint: colors.grey999,
-    },
+      hint: colors.grey999
+    }
   },
   typography: {
     fontFamily: "'Charis SIL', serif",
+    padding: "0px",
+    margin: "0px",
     button: {
-      textTransform: "none",
-    },
+      textTransform: "none"
+    }
   },
   shadows: Array(25).fill("none"),
-  spacing: 8,
+  spacing: 8
 });
 
 export default responsiveFontSizes(theme);

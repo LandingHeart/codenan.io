@@ -6,10 +6,12 @@ import Dashboard from "./pages/Dashboard";
 import MainPage from "./pages/MainPage";
 import TutorialPage from "./pages/TutorialPage";
 import NavBar from "./components/NavBar";
+import SideNav from "./components/SideNav";
 export default function AppRouter() {
   return (
     <Router>
       <NavBar />
+      {/* <SideNav /> */}
       <Routes>
         <Route path="/" element={<MainPage />} exact />
         <Route path="/blog" element={<BlogPage />} exact />

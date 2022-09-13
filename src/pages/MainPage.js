@@ -8,35 +8,57 @@ import MergeSort from "../components/MergeSort";
 const styles = (theme) => ({});
 
 function MainPage() {
+  const twoSum = `let TwoSum = ()=>{
+    let map = new Map();
+    for (let i = 0; i < nums.length; i++) {
+      let dif = target - nums[i];
+
+      if (map.has(dif)) {
+        return [map.get(dif), i];
+      } else {
+        map.set(nums[i], i);
+      }
+    }
+  }
+`;
   const executeCode = (codeString) => {};
   return (
-    <div className="main-page">
-      <div className="main-page-container">
-        <div className="main-page-code-editor-col-1">
-          <CodeEditor execute={executeCode} />
-        </div>
-        <div className="main-page-action-content">
-          <div className="action-content-col">
-            <Typography
-              style={{
-                padding: "0px",
-                margin: "0px",
-                fontSize: "30px",
-                fontWeight: "700",
-                textAlign: "center",
-                lineHeight: "40px",
-                marginBottom: "5px",
-              }}
-            >
-              Visualizing Coding Puzzles
-            </Typography>
-          </div>
-          <div className="action-content-col">
-            <MergeSort />
-          </div>
-        </div>
-      </div>
-    </div>
+    <section className="row">
+      <section className="col-1">
+        <Typography className="col-1-h1">Visualize Complex</Typography>
+        <Typography className="col-1-heading">
+          Coding Problems
+          <br />
+        </Typography>
+        <Typography>You Know Code, You just don't see it</Typography>
+        <Button
+          style={{
+            backgroundColor: "black",
+            color: "white",
+            fontWeight: "bold",
+            fontSize: "16px",
+            width: "50%"
+          }}
+        >
+          Start Learning
+        </Button>
+      </section>
+      <section className="col-2">
+        <iframe
+          src="https://codesandbox.io/embed/stoic-haslett-rkkrh2?fontsize=14&hidenavigation=1&theme=dark"
+          style={{
+            width: "100%",
+            height: "400px",
+            border: "none",
+            borderRadius: "4px",
+            overflow: "hidden"
+          }}
+          title="React"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+      </section>
+    </section>
   );
 }
 
