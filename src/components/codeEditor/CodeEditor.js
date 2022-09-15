@@ -16,7 +16,7 @@ function CodeEditor({ twoSum, width, height }) {
   };
   return (
     <>
-      {/* <CodeMirror
+      <CodeMirror
         style={{
           fontSize: "16px",
           width: `${width}`
@@ -26,7 +26,7 @@ function CodeEditor({ twoSum, width, height }) {
         theme="dark"
         extensions={[javascript({ jsx: true })]}
         onChange={onChange}
-      /> */}
+      />
     </>
   );
 }

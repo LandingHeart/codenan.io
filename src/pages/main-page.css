@@ -13,6 +13,7 @@
   font-size: 3.75rem !important;
   font-weight: bold !important;
 }
+
 .row {
   display: flex;
   flex-direction: row;

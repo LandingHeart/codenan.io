@@ -6,10 +6,9 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
 const pages = [
   {
     navTitle: "Blog",
@@ -44,140 +43,137 @@ const NavBar = () => {
         color: "black"
       }}
     >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+      <Toolbar disableGutters>
+        <Box
+          sx={{
+            display: "flex",
+            flex: 1,
+            display: {
+              xs: "flex",
+              md: "none",
+              justifyContent: "space-between"
+            }
+          }}
+        >
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+            color="inherit"
+          >
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left"
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left"
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+            sx={{
+              display: { xs: "block", md: "none" }
+            }}
+          >
+            {pages.map((page, index) => (
+              <MenuItem key={index} onClick={handleCloseNavMenu}>
+                <Link
+                  to={page.navLink}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <Typography>{page.navTitle}</Typography>
+                </Link>
+              </MenuItem>
+            ))}
+          </Menu>
+        </Box>
+        <Typography
+          href="/"
+          variant="h6"
+          noWrap
+          component="a"
+          style={{ fontSize: "30px" }}
+          sx={{
+            display: { xs: "flex", md: "none" },
+            fontWeight: 700,
+            color: "inherit",
+            textDecoration: "none",
+            fontSize: "27px"
+          }}
+        >
+          codenan
+        </Typography>
+        <Box
+          sx={{ display: { xs: "none", md: "flex" } }}
+          style={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
           <Box
-            sx={{
-              display: "flex",
-              flex: 1,
-              display: {
-                xs: "flex",
-                md: "none",
-                justifyContent: "space-between"
-              }
+            sx={{ display: { xs: "none", md: "flex" } }}
+            style={{
+              flex: "1",
+              justifyContent: "center"
             }}
           >
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left"
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              style={{
+                fontWeight: "bold",
+                color: "inherit",
+                textDecoration: "none",
+                fontSize: "28px"
               }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left"
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" }
+                display: { xs: "none", md: "flex" }
               }}
             >
-              {pages.map((page, index) => (
-                <MenuItem key={index} onClick={handleCloseNavMenu}>
-                  <Link
-                    href={page.navLink}
-                    style={{ textDecoration: "none", color: "black" }}
-                  >
-                    <Typography>{page.navTitle}</Typography>
-                  </Link>
-                </MenuItem>
-              ))}
-            </Menu>
+              codenan
+            </Typography>
           </Box>
-
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            style={{ fontSize: "30px" }}
-            sx={{
-              display: { xs: "flex", md: "none" },
-              fontWeight: 700,
-              color: "inherit",
-              textDecoration: "none",
-              fontSize: "27px"
+          <Box
+            sx={{ display: { xs: "none", md: "flex" } }}
+            style={{
+              flex: "3",
+              justifyContent: "center"
             }}
           >
-            codenan
-          </Typography>
+            {pages.map((page, index) => (
+              <MenuItem key={index} onClick={handleCloseNavMenu}>
+                <Link
+                  to={page.navLink}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <Typography>{page.navTitle}</Typography>
+                </Link>
+              </MenuItem>
+            ))}
+          </Box>
 
           <Box
             sx={{ display: { xs: "none", md: "flex" } }}
             style={{
-              flex: 1,
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center"
+              display: "1",
+              flex: "1",
+              justifyContent: "center"
             }}
           >
-            <Box
-              sx={{ display: { xs: "none", md: "flex" } }}
-              style={{
-                flex: "1",
-                justifyContent: "center"
-              }}
-            >
-              <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                href="/"
-                style={{
-                  fontWeight: "bold",
-                  color: "inherit",
-                  textDecoration: "none",
-                  fontSize: "28px"
-                }}
-                sx={{
-                  display: { xs: "none", md: "flex" }
-                }}
-              >
-                codenan
-              </Typography>
-            </Box>
-            <Box
-              sx={{ display: { xs: "none", md: "flex" } }}
-              style={{
-                flex: "3",
-                justifyContent: "center"
-              }}
-            >
-              {pages.map((page, index) => (
-                <MenuItem key={index} onClick={handleCloseNavMenu}>
-                  <Link
-                    href={page.navLink}
-                    style={{ textDecoration: "none", color: "black" }}
-                  >
-                    <Typography>{page.navTitle}</Typography>
-                  </Link>
-                </MenuItem>
-              ))}
-            </Box>
-
-            <Box
-              sx={{ display: { xs: "none", md: "flex" } }}
-              style={{
-                display: "1",
-                flex: "1",
-                justifyContent: "center"
-              }}
-            >
-              <Button
+            {/* <Button
                 sx={{
                   my: 2,
                   color: "white",
@@ -206,11 +202,10 @@ const NavBar = () => {
                 }}
               >
                 <Typography> Sign In</Typography>
-              </Button>
-            </Box>
+              </Button> */}
           </Box>
-        </Toolbar>
-      </Container>
+        </Box>
+      </Toolbar>
     </AppBar>
   );
 };
